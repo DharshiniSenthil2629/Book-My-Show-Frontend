@@ -1,4 +1,6 @@
-import apiClient from './apiClient';
+node scripts/testMongo.js
+node scripts/importToMongo.js
+npm run devimport apiClient from './apiClient';
 
 export const authService = {
   signup: (userData) => apiClient.post('/auth/signup', userData),
