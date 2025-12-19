@@ -1,0 +1,106 @@
+.movie-card {
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.movie-poster {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  background-color: #e9edf2;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
+
+.book-btn {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.book-btn:hover { transform: translateY(-2px); }
+
+.movie-info {
+  padding: 16px;
+}
+
+.movie-info h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+.movie-genre {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.movie-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.rating {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.language {
+  color: #999;
+  background-color: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .movie-poster {
+    height: 250px;
+  }
+
+  .movie-info h3 {
+    font-size: 14px;
+  }
+
+  .movie-genre {
+    font-size: 12px;
+  }
+}

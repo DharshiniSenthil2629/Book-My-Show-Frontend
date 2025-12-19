@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --muted: #7a7f86;
+  --text: #1f2937;
+  --primary: #ff6b35;
+  --primary-dark: #ff5722;
+  --glass: rgba(255, 255, 255, 0.6);
+  --shadow-sm: 0 4px 14px rgba(31, 41, 55, 0.06);
+  --shadow-md: 0 10px 30px rgba(31, 41, 55, 0.08);
+  --container-width: 1200px;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: white;
+  box-shadow: 0 6px 18px rgba(255, 107, 53, 0.18);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* utility */
+.flex { display: flex; }
+.gap-12 { gap: 12px; }
+.mt-12 { margin-top: 12px; }
+.mb-12 { margin-bottom: 12px; }
