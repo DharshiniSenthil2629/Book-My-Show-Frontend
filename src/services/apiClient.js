@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'https://book-my-show-b544.onrender.com/api',
+  baseURL: 'https://book-my-show-backend-1.onrender.com/api',
   timeout: 10000
 });
 
